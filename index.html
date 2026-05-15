@@ -568,6 +568,7 @@ function finishReceiving() {
   const url = URL.createObjectURL(blob);
   const isZip = recvMeta.name.endsWith('.zip');
   const isImg = isImageFile(recvMeta.name);
+  console.log('File received:', recvMeta.name, 'Is image:', isImg, 'Blob URL:', url);
   const el = document.getElementById('recvFileList');
   const item = document.createElement('div');
   item.className = 'dl-item';
@@ -575,6 +576,7 @@ function finishReceiving() {
   let thumbHtml = '';
   if (isImg) {
     thumbHtml = `<img src="${url}" class="img-thumb" onclick="openImageModal('${url}')" title="Click to preview">`;
+    console.log('Adding thumbnail for:', recvMeta.name);
   }
   
   item.innerHTML = `
