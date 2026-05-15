@@ -208,6 +208,16 @@
     <div class="log" id="log"></div>
   </div>
 
+
+  <!-- Image preview modal -->
+  <div id="imageModal" class="modal" onclick="if(event.target===this) closeImageModal()">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeImageModal()">✕</button>
+      <img id="modalImage" class="modal-img">
+      <div class="modal-info">Click anywhere to close</div>
+    </div>
+  </div>
+
 </main>
 
 <footer>
