@@ -603,13 +603,7 @@ function finishReceiving() {
   btnContainer.style.gap = '0.5rem';
   btnContainer.style.flexShrink = '0';
   
-  if (isZip) {
-    const previewBtn = document.createElement('button');
-    previewBtn.className = 'dl-btn';
-    previewBtn.textContent = '📂 Preview';
-    previewBtn.addEventListener('click', () => previewZipFolder(blob, recvMeta.name));
-    btnContainer.appendChild(previewBtn);
-  }
+
   
   const downloadLink = document.createElement('a');
   downloadLink.href = url;
